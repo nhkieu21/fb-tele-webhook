@@ -40,4 +40,5 @@ app.post('/webhook', (req, res) => {
     }
 });
 
-app.listen(3000, () => console.log('Webhook is listening...'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Webhook is listening on port ${PORT}...`));
